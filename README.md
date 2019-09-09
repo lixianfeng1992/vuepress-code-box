@@ -1,20 +1,18 @@
-<h1 align="center">vuepress-plugin-demo-code</h1>
+<h1 align="center">vuepress-code-box</h1>
 
 <p align="center">
-    <a href="https://circleci.com/gh/BuptStEve/vuepress-plugin-demo-code/tree/master" target="_blank">
-        <img src="https://img.shields.io/circleci/project/github/BuptStEve/vuepress-plugin-demo-code/master.svg" alt="Build Status">
+    <a href="https://circleci.com/gh/BuptStEve/vuepress-code-box/tree/master" target="_blank">
+        <img src="https://img.shields.io/circleci/project/github/BuptStEve/vuepress-code-box/master.svg" alt="Build Status">
     </a>
-    <a href="https://codecov.io/github/BuptStEve/vuepress-plugin-demo-code?branch=master" target="_blank">
-        <img src="https://img.shields.io/codecov/c/github/BuptStEve/vuepress-plugin-demo-code/master.svg" alt="Coverage Status">
+    <a href="https://codecov.io/github/BuptStEve/vuepress-code-box?branch=master" target="_blank">
+        <img src="https://img.shields.io/codecov/c/github/BuptStEve/vuepress-code-box/master.svg" alt="Coverage Status">
     </a>
-    <a href="https://www.npmjs.com/package/vuepress-plugin-demo-code" target="_blank">
-        <img src="https://badgen.net/npm/dm/vuepress-plugin-demo-code" alt="Downloads per month">
-        <img src="https://img.shields.io/npm/v/vuepress-plugin-demo-code.svg" alt="Version">
-        <img src="https://img.shields.io/npm/l/vuepress-plugin-demo-code.svg" alt="License">
+    <a href="https://www.npmjs.com/package/vuepress-code-box" target="_blank">
+        <img src="https://badgen.net/npm/dm/vuepress-code-box" alt="Downloads per month">
+        <img src="https://img.shields.io/npm/v/vuepress-code-box.svg" alt="Version">
+        <img src="https://img.shields.io/npm/l/vuepress-code-box.svg" alt="License">
     </a>
 </p>
-
-English | <a href="https://buptsteve.github.io/vuepress-plugin-demo-code/zh/">简体中文</a>
 
 > demo-code plugin for vuepress.
 
@@ -34,7 +32,7 @@ export default {
 :::
 ```
 
-<a href="https://buptsteve.github.io/vuepress-plugin-demo-code/example/#result">Please click here to see the demo</a>
+<a href="https://buptsteve.github.io/vuepress-code-box/example/#result">Please click here to see the demo</a>
 
 ## Features
 * Only one source code
@@ -43,9 +41,6 @@ export default {
   * ✔ Codepen
   * ✔ JSFiddle
   * ✔ CodeSandbox
-* Designed for long code
-  * Sticky fold button
-  * Auto scroll to top when you fold code
 
 ## Install
 
@@ -54,9 +49,9 @@ export default {
 * Then install the plugin
 
 ```bash
-$ npm i -D vuepress-plugin-demo-code
+$ npm i -D vuepress-code-box
 # OR
-$ yarn add -D vuepress-plugin-demo-code
+$ yarn add -D vuepress-code-box
 ```
 
 ## Usage
@@ -159,5 +154,3 @@ The mark of the plugin, follows the tag after `:::`.
 ## License
 
 [MIT](http://opensource.org/licenses/MIT)
-
-Copyright (c) StEve Young

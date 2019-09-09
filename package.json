@@ -1,6 +1,6 @@
 {
     "name": "vuepress-code-box",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "description": "📝 Demo and code plugin for vuepress",
     "main": "src/index.js",
     "files": [
