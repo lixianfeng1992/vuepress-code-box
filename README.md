@@ -49,9 +49,9 @@ export default {
 * Then install the plugin
 
 ```bash
-$ npm i -D vuepress-code-box
+$ npm i -D vuepress-plugin-code-gen-box
 # OR
-$ yarn add -D vuepress-code-box
+$ yarn add -D vuepress-plugin-code-gen-box
 ```
 
 ## Usage

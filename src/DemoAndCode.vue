@@ -153,17 +153,24 @@ html {
 .demo-and-code-wrapper {
     padding: 20px 0;
 
-    .code-style:hover {
-        box-shadow: 0 0 8px 0 rgba(232,237,250,.6), 0 2px 4px 0 rgba(232,237,250,.5);
+    .code-style {
         border-radius: 3px;
         transition: .2s;
         border: 1px solid #ebebeb;
+        margin: 0.85rem 0;
+    }
+
+    .code-style:hover {
+        box-shadow: 0 0 8px 0 rgba(232,237,250,.6), 0 2px 4px 0 rgba(232,237,250,.5);
     }
 
     div[class*=language-] {
         border-radius: 0 !important;
     }
 
+    pre[class*="language-"] {
+        margin: 0 !important;
+    }
     .content pre, .content pre[class*=language-] {
         margin-bottom: 0 !important;
     }
@@ -177,7 +184,6 @@ html {
 
         width: 100%;
         height: 50px;
-        margin-bottom: -.85rem;
 
         text-align: center;
 
@@ -190,6 +196,7 @@ html {
             display: flex;
             flex: 1;
             justify-content: center;
+            font-size: 14px;
         }
 
         .arrow-icon {
@@ -205,12 +212,18 @@ html {
             border-bottom: 6px solid #2c3e50;
             border-left: 6px solid transparent;
         }
+
+        .online-wrapper {
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
     }
 
     .code-wrapper {
         overflow: hidden;
 
-        transition: max-height .6s ease-in-out;
+        transition: max-height .2s;
     }
 }
 
