@@ -1,31 +1,30 @@
 <template>
     <section class="demo-and-code-wrapper">
         <slot name="demo" />
-
-        <div
-            ref="codeControl"
-            class="code-control"
-            @click="onClickControl"
-            :style="codeControlStyle"
-        >
+        <div class="code-style">
+            <div class="code-wrapper" ref="codeWrapper" :style="codeWrapperStyle">
+                <slot name="code" />
+            </div>
+            <div
+              ref="codeControl"
+              class="code-control"
+              @click="onClickControl"
+              :style="codeControlStyle"
+            >
             <span class="control-btn" v-show="isShowControl">
                 {{ controlText }}
                 <i class="arrow-icon" :style="iconStyle" />
             </span>
-
-            <div class="online-wrapper" @click.stop>
-                <OnlineEdit
-                    v-for="platform in platforms"
-                    :key="platform"
-                    v-show="showOnlineBtns[platform]"
-                    v-bind="parsedCode"
-                    :platform="platform"
-                />
+                <div class="online-wrapper" @click.stop>
+                    <OnlineEdit
+                      v-for="platform in platforms"
+                      :key="platform"
+                      v-show="showOnlineBtns[platform]"
+                      v-bind="parsedCode"
+                      :platform="platform"
+                    />
+                </div>
             </div>
-        </div>
-
-        <div class="code-wrapper" ref="codeWrapper" :style="codeWrapperStyle">
-            <slot name="code" />
         </div>
     </section>
 </template>
@@ -64,11 +63,9 @@ export default {
     },
     data () {
         return {
-            scrollTop: 0,
             platforms: PLATFORMS,
             codeHeight: 9999,
             navbarHeight: 0,
-
             isShowCode: true,
             isShowControl: true,
         }
@@ -121,22 +118,16 @@ export default {
     methods: {
         onClickControl () {
             this.isShowCode = !this.isShowCode
-
-            if (!this.isShowCode) {
-                this.getDomRect()
-                window.scrollTo({ top: this.scrollTop, behavior: 'smooth' })
-            }
         },
         getDomRect () {
             const navbar = document.querySelector('header.navbar')
             const { codeWrapper } = this.$refs
 
-            const { top: codeTop, height: codeHeight } = codeWrapper.getBoundingClientRect()
+            const { height: codeHeight } = codeWrapper.getBoundingClientRect()
             const { height: navbarHeight } = navbar
                 ? navbar.getBoundingClientRect()
                 : { height: 0 }
 
-            this.scrollTop = window.scrollY + codeTop - navbarHeight - 35
             this.codeHeight = codeHeight
             this.navbarHeight = navbarHeight
         },
@@ -161,6 +152,21 @@ html {
 
 .demo-and-code-wrapper {
     padding: 20px 0;
+
+    .code-style:hover {
+        box-shadow: 0 0 8px 0 rgba(232,237,250,.6), 0 2px 4px 0 rgba(232,237,250,.5);
+        border-radius: 3px;
+        transition: .2s;
+        border: 1px solid #ebebeb;
+    }
+
+    div[class*=language-] {
+        border-radius: 0 !important;
+    }
+
+    .content pre, .content pre[class*=language-] {
+        margin-bottom: 0 !important;
+    }
 
     .code-control {
         position: sticky;

@@ -62,8 +62,8 @@ module.exports = (options = {}) => {
         const {
             jsLibs = [],
             cssLibs = [],
-            showText = 'show code',
-            hideText = 'hide code',
+            showText = '显示代码',
+            hideText = '隐藏代码',
             minHeight,
         } = options
 

@@ -1,6 +1,6 @@
 {
-    "name": "vuepress-plugin-demo-code",
-    "version": "0.3.5",
+    "name": "vuepress-code-box",
+    "version": "0.0.1",
     "description": "📝 Demo and code plugin for vuepress",
     "main": "src/index.js",
     "files": [
@@ -76,9 +76,9 @@
     ],
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/BuptStEve/vuepress-plugin-demo-code.git"
+        "url": "git+https://github.com/falstack/vuepress-code-box.git"
     },
-    "homepage": "https://buptsteve.github.io/vuepress-plugin-demo-code/",
-    "author": "StEve Young",
+    "homepage": "https://github.com/falstack/vuepress-code-box/",
+    "author": "falstack",
     "license": "MIT"
 }
