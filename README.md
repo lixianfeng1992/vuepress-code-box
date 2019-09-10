@@ -1,20 +1,6 @@
-<h1 align="center">vuepress-code-box</h1>
+<h1 align="center">vuepress-plugin-code-gen-box</h1>
 
-<p align="center">
-    <a href="https://circleci.com/gh/BuptStEve/vuepress-code-box/tree/master" target="_blank">
-        <img src="https://img.shields.io/circleci/project/github/BuptStEve/vuepress-code-box/master.svg" alt="Build Status">
-    </a>
-    <a href="https://codecov.io/github/BuptStEve/vuepress-code-box?branch=master" target="_blank">
-        <img src="https://img.shields.io/codecov/c/github/BuptStEve/vuepress-code-box/master.svg" alt="Coverage Status">
-    </a>
-    <a href="https://www.npmjs.com/package/vuepress-code-box" target="_blank">
-        <img src="https://badgen.net/npm/dm/vuepress-code-box" alt="Downloads per month">
-        <img src="https://img.shields.io/npm/v/vuepress-code-box.svg" alt="Version">
-        <img src="https://img.shields.io/npm/l/vuepress-code-box.svg" alt="License">
-    </a>
-</p>
-
-> demo-code plugin for vuepress.
+> code-gen-box plugin for vuepress.
 
 With this plugin, you can both display demo and code via following syntax.
 
@@ -24,15 +10,13 @@ With this plugin, you can both display demo and code via following syntax.
 
 <script>
 export default {
-    methods: {
-        onClick: () => { window.alert(1) },
-    },
+  methods: {
+    onClick: () => { window.alert(1) },
+  },
 }
 </script>
 :::
 ```
-
-<a href="https://buptsteve.github.io/vuepress-code-box/example/#result">Please click here to see the demo</a>
 
 ## Features
 * Only one source code
@@ -49,9 +33,9 @@ export default {
 * Then install the plugin
 
 ```bash
-$ npm i -D vuepress-plugin-code-gen-box
+$ npm i vuepress-plugin-code-gen-box -D
 # OR
-$ yarn add -D vuepress-plugin-code-gen-box
+$ yarn add vuepress-plugin-code-gen-box -D
 ```
 
 ## Usage
@@ -59,7 +43,7 @@ Write vuepress config
 
 ```js
 module.exports = {
-    plugins: ['demo-code'],
+  plugins: ['code-gen-box'],
 }
 ```
 
@@ -112,19 +96,19 @@ Css libraries for the demo.
 
 ### showText
 * Type: `String`
-* Default: `show code`
+* Default: `显示代码`
 
 The display text of unfold code button.
 
 ### hideText
 * Type: `String`
-* Default: `hide code`
+* Default: `隐藏代码`
 
 The display text of fold code button.
 
 ### minHeight
 * Type: `Number`
-* Default: `200`(px)
+* Default: `0`(px)
 
 The height of the code when it is folded.
 
