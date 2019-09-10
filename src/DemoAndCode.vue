@@ -220,8 +220,8 @@ html {
 
     .code-wrapper {
         overflow: hidden;
-
         transition: max-height .2s;
+        max-height: 0;
     }
 }
 

@@ -1,6 +1,6 @@
 {
     "name": "vuepress-plugin-code-gen-box",
-    "version": "0.0.6",
+    "version": "0.0.7",
     "description": "📝 Demo and code plugin for vuepress",
     "main": "src/index.js",
     "files": [
