@@ -138,10 +138,6 @@ export default {
     mounted () {
         this.getDomRect()
         this.isShowCode = false
-
-        if (this.codeHeight < this.minHeight) {
-            this.isShowControl = false
-        }
     },
 }
 </script>
@@ -221,7 +217,6 @@ html {
     .code-wrapper {
         overflow: hidden;
         transition: max-height .2s;
-        max-height: 0;
     }
 }
 
