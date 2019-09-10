@@ -1,6 +1,8 @@
 <template>
     <section class="demo-and-code-wrapper">
-        <slot name="demo" />
+        <div class="demo-style">
+            <slot name="demo" />
+        </div>
         <div class="code-style">
             <div class="code-wrapper" ref="codeWrapper" :style="codeWrapperStyle">
                 <slot name="code" />
@@ -55,7 +57,7 @@ export default {
         cssLibsStr: { type: String, default: '[]' },
         minHeight: {
             type: Number,
-            default: 200,
+            default: 0,
             validator: val => val >= 0,
         },
         onlineBtnsStr: { type: String, default: '{}' },
@@ -150,18 +152,18 @@ html {
     scroll-behavior: smooth;
 }
 
+.demo-and-code-wrapper:hover {
+    box-shadow: 0 0 8px 0 rgba(232,237,250,.6), 0 2px 4px 0 rgba(232,237,250,.5);
+}
+
 .demo-and-code-wrapper {
-    padding: 20px 0;
+    margin: 20px 0;
+    border-radius: 3px;
+    transition: .2s;
+    border: 1px solid #ebebeb;
 
-    .code-style {
-        border-radius: 3px;
-        transition: .2s;
-        border: 1px solid #ebebeb;
-        margin: 0.85rem 0;
-    }
-
-    .code-style:hover {
-        box-shadow: 0 0 8px 0 rgba(232,237,250,.6), 0 2px 4px 0 rgba(232,237,250,.5);
+    .demo-style {
+        padding: 24px;
     }
 
     div[class*=language-] {
@@ -178,19 +180,15 @@ html {
     .code-control {
         position: sticky;
         z-index: 9;
-
         display: flex;
         justify-content: space-between;
-
         width: 100%;
         height: 50px;
-
         text-align: center;
-
         background-color: #fff;
-
         font-size: 20px;
         line-height: 50px;
+        border-top: 1px solid #eaeefb;
 
         .control-btn {
             display: flex;
@@ -230,6 +228,7 @@ html {
 @media (max-width: 419px) {
     .demo-and-code-wrapper {
         margin: 0 -1.5rem;
+        border-radius: 0 !important;
 
         .code-wrapper {
             overflow: auto;
@@ -238,6 +237,14 @@ html {
         div[class*="language-"] {
             margin: 0 !important;
         }
+    }
+
+    .demo-and-code-wrapper:hover {
+        box-shadow: none;
+    }
+
+    .online-wrapper {
+        display: none;
     }
 }
 </style>
