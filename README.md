@@ -79,13 +79,6 @@ The display text of unfold code button.
 
 The display text of fold code button.
 
-### minHeight
-
-- Type: `Number`
-- Default: `0`(px)
-
-The height of the code when it is folded.
-
 ## License
 
 [MIT](http://opensource.org/licenses/MIT)
