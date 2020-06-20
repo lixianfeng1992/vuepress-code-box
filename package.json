@@ -1,5 +1,5 @@
 {
-  "name": "vuepress-plugin-code-gen-box",
+  "name": "@maiscrm/vuepress-plugin-code-box",
   "version": "0.1.0",
   "description": "📝 Demo and code plugin for vuepress",
   "main": "src/index.js",
@@ -41,8 +41,8 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/falstack/vuepress-code-box.git"
+    "url": "https://github.com/maiscrm/vuepress-code-box"
   },
-  "homepage": "https://github.com/falstack/vuepress-code-box/",
+  "homepage": "https://github.com/maiscrm/vuepress-code-box",
   "license": "MIT"
 }
